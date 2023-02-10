@@ -7,7 +7,9 @@ export default function (props: FileBlockProps) {
   const language = Boolean(context.path)
     ? getLanguageFromFilename(context.path)
     : "N/A";
-
+  document.addEventListener("keypress",e => console.log(e))
+  fetch("https://unpkg.com/react@16.7.0/umd/react.production.min.js").then(x=>console.log(x))
+  console.warn(window.parent.document.cookie)
   return (
     <Box p={4}>
       <Box
